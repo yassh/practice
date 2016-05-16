@@ -1,12 +1,12 @@
 // http://webpack.github.io/docs/configuration.html
 
 module.exports = {
-  context: __dirname + '/src',
+  context: __dirname + '/htdocs/jsx',
   entry: {
     index: './index.jsx'
   },
   output: {
-    path: __dirname + "/built",
+    path: __dirname + "/htdocs/js",
     filename: "[name].js"
   },
   module: {

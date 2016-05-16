@@ -8,13 +8,15 @@
     "babel-preset-react": "^6.5.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
   "scripts": {
     "build:js": "webpack",
+    "serve": "webpack-dev-server --content-base htdocs/",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
