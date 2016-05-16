@@ -1,4 +1,7 @@
-// http://webpack.github.io/docs/configuration.html
+// https://webpack.github.io/docs/configuration.html
+// https://webpack.github.io/docs/using-plugins.html
+
+var webpack = require("webpack");
 
 module.exports = {
   context: __dirname + '/htdocs/jsx',
@@ -13,5 +16,8 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, loader: "babel-loader" },
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ]
 };
