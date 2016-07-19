@@ -1,0 +1,13 @@
+{
+  "name": "20160719-yasshplus",
+  "version": "1.0.0",
+  "dependencies": {
+    "yassh-plus": "^1.0.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
