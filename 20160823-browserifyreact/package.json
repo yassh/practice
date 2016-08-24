@@ -20,7 +20,7 @@
     "fixpack": "fixpack",
     "jade:watch": "jade ./src --out ./dist --pretty --watch",
     "jsx:watch": "watchify -t [ babelify ] -g [ uglifyify ] ./src/index.jsx -o ./dist/index.js",
-    "serve": "http-server ./dist -p 8888 -o",
+    "serve": "http-server ./dist -p 8888 -c1 -o",
     "start": "npm-run-all -p *:watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
