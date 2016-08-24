@@ -559,11 +559,49 @@ var CommentBox = function (_React$Component) {
   _createClass(CommentBox, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentBox' }, 'Hello, world! I am a CommentBox.');
+      return _react2.default.createElement('div', { className: 'commentBox' }, _react2.default.createElement('h1', null, 'Comments'), _react2.default.createElement(CommentList, null), _react2.default.createElement(CommentForm, null));
     }
   }]);
 
   return CommentBox;
+}(_react2.default.Component);
+
+var CommentList = function (_React$Component2) {
+  _inherits(CommentList, _React$Component2);
+
+  function CommentList() {
+    _classCallCheck(this, CommentList);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(CommentList).apply(this, arguments));
+  }
+
+  _createClass(CommentList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { className: 'commentList' }, 'Hello, world! I am a CommentList.');
+    }
+  }]);
+
+  return CommentList;
+}(_react2.default.Component);
+
+var CommentForm = function (_React$Component3) {
+  _inherits(CommentForm, _React$Component3);
+
+  function CommentForm() {
+    _classCallCheck(this, CommentForm);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(CommentForm).apply(this, arguments));
+  }
+
+  _createClass(CommentForm, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { className: 'commentForm' }, 'Hello, world! I am a CommentForm.');
+    }
+  }]);
+
+  return CommentForm;
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(CommentBox, null), document.getElementById('content'));
