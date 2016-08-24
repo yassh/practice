@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Remarkable from 'remarkable';
 
 class CommentBox extends React.Component {
   render() {
@@ -25,13 +26,19 @@ class CommentList extends React.Component {
 }
 
 class Comment extends React.Component {
+  rawMarkup() {
+    var md = new Remarkable();
+    var rawMarkup = md.render(this.props.children.toString());
+    return { __html: rawMarkup };
+  }
+
   render() {
     return (
       <div className="comment">
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>
-        {this.props.children}
+        <div dangerouslySetInnerHTML={this.rawMarkup()} />
       </div>
     );
   }

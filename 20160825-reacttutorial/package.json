@@ -17,6 +17,7 @@
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "remarkable": "^1.6.2",
     "simplifyify": "^2.0.1"
   },
   "license": "ISC",
