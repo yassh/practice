@@ -7,6 +7,7 @@
     "babelify": "^7.3.0",
     "fixpack": "^2.3.1",
     "http-server": "^0.9.0",
+    "jade-cli": "^0.1.1",
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -17,9 +18,10 @@
   "main": "index.js",
   "scripts": {
     "fixpack": "fixpack",
-    "js:watch": "watchify -t [ babelify ] -g [ uglifyify ] index.jsx -o index.js",
-    "serve": "http-server -p 8888 -o",
-    "start": "npm-run-all -p js:watch serve",
+    "jade:watch": "jade ./src --out ./dist --pretty --watch",
+    "jsx:watch": "watchify -t [ babelify ] -g [ uglifyify ] ./src/index.jsx -o ./dist/index.js",
+    "serve": "http-server ./dist -p 8888 -o",
+    "start": "npm-run-all -p jsx:watch jade:watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
