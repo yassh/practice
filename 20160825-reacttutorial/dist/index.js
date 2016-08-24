@@ -578,15 +578,34 @@ var CommentList = function (_React$Component2) {
   _createClass(CommentList, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentList' }, 'Hello, world! I am a CommentList.');
+      return _react2.default.createElement('div', { className: 'commentList' }, _react2.default.createElement(Comment, { author: 'Pete Hunt' }, 'This is one comment'), _react2.default.createElement(Comment, { author: 'Jordan Walke' }, 'This is *another* comment'));
     }
   }]);
 
   return CommentList;
 }(_react2.default.Component);
 
-var CommentForm = function (_React$Component3) {
-  _inherits(CommentForm, _React$Component3);
+var Comment = function (_React$Component3) {
+  _inherits(Comment, _React$Component3);
+
+  function Comment() {
+    _classCallCheck(this, Comment);
+
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(Comment).apply(this, arguments));
+  }
+
+  _createClass(Comment, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { className: 'comment' }, _react2.default.createElement('h2', { className: 'commentAuthor' }, this.props.author), this.props.children);
+    }
+  }]);
+
+  return Comment;
+}(_react2.default.Component);
+
+var CommentForm = function (_React$Component4) {
+  _inherits(CommentForm, _React$Component4);
 
   function CommentForm() {
     _classCallCheck(this, CommentForm);
