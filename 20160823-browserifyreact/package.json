@@ -10,13 +10,14 @@
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "uglifyify": "^3.0.2",
     "watchify": "^3.7.0"
   },
   "license": "ISC",
   "main": "index.js",
   "scripts": {
     "fixpack": "fixpack",
-    "js:watch": "watchify -t [ babelify ] index.jsx -o index.js",
+    "js:watch": "watchify -t [ babelify ] -g [ uglifyify ] index.jsx -o index.js",
     "serve": "http-server -p 8888 -o",
     "start": "npm-run-all -p js:watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
