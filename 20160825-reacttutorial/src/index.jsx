@@ -26,9 +26,18 @@ class CommentBox extends React.Component {
     });
   }
 
+  handleCommentSubmit(comment) {
+    const data = this.state.data;
+
+    comment.id = data.length + 2;
+    const newData = data.concat(comment);
+
+    this.setState({ data: newData });
+  }
+
   componentDidMount() {
     this.loadCommentsFromServer();
-    setInterval(() => this.loadCommentsFromServer(), this.props.pollInterval);
+    // setInterval(() => this.loadCommentsFromServer(), this.props.pollInterval);
   }
 
   render() {
@@ -36,7 +45,7 @@ class CommentBox extends React.Component {
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
-        <CommentForm />
+        <CommentForm onCommentSubmit={(e) => this.handleCommentSubmit(e)} />
       </div>
     );
   }
@@ -80,11 +89,44 @@ class Comment extends React.Component {
 }
 
 class CommentForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      author: '',
+      text: '',
+    };
+  }
+
+  handleAuthorChange(e) {
+    this.setState({ author: e.target.value });
+  }
+
+  handleTextChange(e) {
+    this.setState({ text: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    const author = this.state.author.trim();
+    const text = this.state.text.trim();
+
+    if (!text || !author) {
+      return;
+    }
+
+    this.props.onCommentSubmit({ author: author, text: text });
+    this.setState({ author: '', text: '' });
+  }
+
   render() {
     return (
-      <div className="commentForm">
-        Hello, world! I am a CommentForm.
-      </div>
+      <form className="commentForm" onSubmit={(e) => this.handleSubmit(e)}>
+        <input type="text" placeholder="Your name" value={this.state.author} onChange={(e) => this.handleAuthorChange(e)} />
+        <input type="text" placeholder="Say something..." value={this.state.text} onChange={(e) => this.handleTextChange(e)} />
+        <input type="submit" value="Post" />
+      </form>
     );
   }
 }

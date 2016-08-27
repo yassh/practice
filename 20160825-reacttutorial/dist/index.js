@@ -1052,19 +1052,29 @@ var CommentBox = function (_React$Component) {
       });
     }
   }, {
+    key: 'handleCommentSubmit',
+    value: function handleCommentSubmit(comment) {
+      var data = this.state.data;
+
+      comment.id = data.length + 2;
+      var newData = data.concat(comment);
+
+      this.setState({ data: newData });
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _this3 = this;
-
       this.loadCommentsFromServer();
-      setInterval(function () {
-        return _this3.loadCommentsFromServer();
-      }, this.props.pollInterval);
+      // setInterval(() => this.loadCommentsFromServer(), this.props.pollInterval);
     }
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentBox' }, _react2.default.createElement('h1', null, 'Comments'), _react2.default.createElement(CommentList, { data: this.state.data }), _react2.default.createElement(CommentForm, null));
+      var _this3 = this;
+
+      return _react2.default.createElement('div', { className: 'commentBox' }, _react2.default.createElement('h1', null, 'Comments'), _react2.default.createElement(CommentList, { data: this.state.data }), _react2.default.createElement(CommentForm, { onCommentSubmit: function onCommentSubmit(e) {
+          return _this3.handleCommentSubmit(e);
+        } }));
     }
   }]);
 
@@ -1123,16 +1133,55 @@ var Comment = function (_React$Component3) {
 var CommentForm = function (_React$Component4) {
   _inherits(CommentForm, _React$Component4);
 
-  function CommentForm() {
+  function CommentForm(props) {
     _classCallCheck(this, CommentForm);
 
-    return _possibleConstructorReturn(this, Object.getPrototypeOf(CommentForm).apply(this, arguments));
+    var _this6 = _possibleConstructorReturn(this, Object.getPrototypeOf(CommentForm).call(this, props));
+
+    _this6.state = {
+      author: '',
+      text: ''
+    };
+    return _this6;
   }
 
   _createClass(CommentForm, [{
+    key: 'handleAuthorChange',
+    value: function handleAuthorChange(e) {
+      this.setState({ author: e.target.value });
+    }
+  }, {
+    key: 'handleTextChange',
+    value: function handleTextChange(e) {
+      this.setState({ text: e.target.value });
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit(e) {
+      e.preventDefault();
+
+      var author = this.state.author.trim();
+      var text = this.state.text.trim();
+
+      if (!text || !author) {
+        return;
+      }
+
+      this.props.onCommentSubmit({ author: author, text: text });
+      this.setState({ author: '', text: '' });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentForm' }, 'Hello, world! I am a CommentForm.');
+      var _this7 = this;
+
+      return _react2.default.createElement('form', { className: 'commentForm', onSubmit: function onSubmit(e) {
+          return _this7.handleSubmit(e);
+        } }, _react2.default.createElement('input', { type: 'text', placeholder: 'Your name', value: this.state.author, onChange: function onChange(e) {
+          return _this7.handleAuthorChange(e);
+        } }), _react2.default.createElement('input', { type: 'text', placeholder: 'Say something...', value: this.state.text, onChange: function onChange(e) {
+          return _this7.handleTextChange(e);
+        } }), _react2.default.createElement('input', { type: 'submit', value: 'Post' }));
     }
   }]);
 
