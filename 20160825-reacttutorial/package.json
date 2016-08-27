@@ -30,6 +30,6 @@
     "jsx:watch": "simplifyify ./src/index.jsx --outfile ./dist/index.js --minify --debug --watch",
     "serve": "http-server ./dist -p 8888 -c1 -o",
     "start": "npm-run-all -p *:watch serve",
-    "test": "npm-run-all *:validate"
+    "test": "npm-run-all fixpack *:validate"
   }
 }
