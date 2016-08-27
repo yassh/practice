@@ -1,0 +1,37 @@
+{
+  "name": "20160828-reactsample",
+  "version": "1.0.0",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "fixpack": "^2.3.1",
+    "http-server": "^0.9.0",
+    "jade-cli": "^0.1.1",
+    "jscs": "^3.0.7",
+    "npm-run-all": "^3.0.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "rimraf": "^2.5.4",
+    "simplifyify": "^2.0.1"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "fix": "npm-run-all fixpack *:fix",
+    "fixpack": "fixpack",
+    "jade:build:watch": "jade ./src --out ./dist --pretty --watch",
+    "jsx:build:watch": "simplifyify './src/**/*.jsx' --outfile './dist/**/*.js' --minify --debug --watch",
+    "jsx:fix": "jscs ./src --fix",
+    "jsx:validate": "jscs ./src",
+    "serve": "http-server ./dist -p 8888 -c1 -o",
+    "start": "npm-run-all clean -p **:watch serve",
+    "test": "npm-run-all *:validate"
+  }
+}
