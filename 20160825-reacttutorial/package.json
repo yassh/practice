@@ -27,7 +27,7 @@
     "jade:watch": "jade ./src --out ./dist --pretty --watch",
     "jsx:fix": "jscs ./src --fix",
     "jsx:validate": "jscs ./src",
-    "jsx:watch": "simplifyify ./src/index.jsx --outfile ./dist/index.js --minify --watch",
+    "jsx:watch": "simplifyify ./src/index.jsx --outfile ./dist/index.js --minify --debug --watch",
     "serve": "http-server ./dist -p 8888 -c1 -o",
     "start": "npm-run-all -p *:watch serve",
     "test": "npm-run-all *:validate"
