@@ -694,7 +694,7 @@ var CommentBox = function (_React$Component) {
   _createClass(CommentBox, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentBox' }, _react2.default.createElement('h1', null, 'Comments'), _react2.default.createElement(CommentList, null), _react2.default.createElement(CommentForm, null));
+      return _react2.default.createElement('div', { className: 'commentBox' }, _react2.default.createElement('h1', null, 'Comments'), _react2.default.createElement(CommentList, { data: this.props.data }), _react2.default.createElement(CommentForm, null));
     }
   }]);
 
@@ -713,7 +713,11 @@ var CommentList = function (_React$Component2) {
   _createClass(CommentList, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { className: 'commentList' }, _react2.default.createElement(Comment, { author: 'Pete Hunt' }, 'This is one comment'), _react2.default.createElement(Comment, { author: 'Jordan Walke' }, 'This is *another* comment'));
+      var commentNodes = this.props.data.map(function (comment) {
+        return _react2.default.createElement(Comment, { author: comment.author, key: comment.id }, comment.text);
+      });
+
+      return _react2.default.createElement('div', { className: 'commentList' }, commentNodes);
     }
   }]);
 
@@ -765,6 +769,8 @@ var CommentForm = function (_React$Component4) {
   return CommentForm;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(CommentBox, null), document.getElementById('content'));
+var data = [{ id: 1, author: "Pete Hunt", text: "This is one comment" }, { id: 2, author: "Jordan Walke", text: "This is *another* comment" }];
+
+_reactDom2.default.render(_react2.default.createElement(CommentBox, { data: data }), document.getElementById('content'));
 
 },{"react":172,"react-dom":29,"remarkable":173}]},{},[233]);
