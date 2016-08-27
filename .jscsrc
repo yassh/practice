@@ -1,7 +1,8 @@
 // http://jscs.info/overview
 
 {
-  "preset": "airbnb",
-  "fileExtensions": [".js", ".jsx"],
-  "disallowTrailingComma": true // http://jscs.info/rule/disallowTrailingComma
+  "fileExtensions": [".js", ".jsx"]
+  , "preset": "airbnb"
+  , "requirePaddingNewLinesAfterBlocks": { "allExcept": [ "inCallExpressions", "inNewExpressions", "inArrayExpressions", "inProperties", "singleLine" ] } // http://jscs.info/rule/requirePaddingNewLinesAfterBlocks
+  , "requireShorthandArrowFunctions": null// http://jscs.info/rule/requireShorthandArrowFunctions
 }
