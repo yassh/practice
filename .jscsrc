@@ -4,5 +4,6 @@
   "fileExtensions": [".js", ".jsx"]
   , "preset": "airbnb" // https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json
   , "requirePaddingNewLinesAfterBlocks": { "allExcept": [ "inCallExpressions", "inNewExpressions", "inArrayExpressions", "inProperties", "singleLine" ] } // http://jscs.info/rule/requirePaddingNewLinesAfterBlocks
-  , "requireShorthandArrowFunctions": null// http://jscs.info/rule/requireShorthandArrowFunctions
+  , "requireShorthandArrowFunctions": null // http://jscs.info/rule/requireShorthandArrowFunctions
+  , "maximumLineLength": null // http://jscs.info/rule/maximumLineLength
 }
