@@ -25,6 +25,7 @@
   "scripts": {
     "fixpack": "fixpack",
     "jade:watch": "jade ./src --out ./dist --pretty --watch",
+    "jsx:fix": "jscs ./src --fix",
     "jsx:validate": "jscs ./src",
     "jsx:watch": "simplifyify ./src/index.jsx --outfile ./dist/index.js --minify --watch",
     "serve": "http-server ./dist -p 8888 -c1 -o",
