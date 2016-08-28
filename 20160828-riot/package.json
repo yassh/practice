@@ -1,0 +1,21 @@
+{
+  "name": "20160828-riot",
+  "version": "1.0.0",
+  "devDependencies": {
+    "fixpack": "^2.3.1",
+    "http-server": "^0.9.0",
+    "jade-cli": "^0.1.1",
+    "npm-run-all": "^3.0.0",
+    "rimraf": "^2.5.4"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "fixpack": "fixpack",
+    "jade:build:watch": "jade ./src --out ./dist --pretty --watch",
+    "serve": "http-server ./dist -p 8888 -c1 -o",
+    "start": "npm-run-all clean -p **:watch serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
