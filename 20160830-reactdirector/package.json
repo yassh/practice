@@ -1,0 +1,34 @@
+{
+  "name": "20160830-reactdirector",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "cpx": "^1.3.2",
+    "director": "^1.2.8",
+    "fixpack": "^2.3.1",
+    "http-server": "^0.9.0",
+    "is": "^3.1.0",
+    "jade-cli": "^0.1.1",
+    "jscs": "^3.0.7",
+    "npm-run-all": "^3.0.0",
+    "react": "^15.3.1",
+    "rimraf": "^2.5.4",
+    "watchify": "^3.7.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "fix": "npm-run-all fixpack *:fix",
+    "fixpack": "fixpack",
+    "jade:build:watch": "jade ./src --out ./dist --pretty --watch",
+    "jsx:build:watch": "watchify ./src/index.jsx --outfile ./dist/index.js --debug --transform [ babelify --presets [ es2015 react ] ]",
+    "jsx:fix": "jscs ./src --fix",
+    "jsx:validate": "jscs ./src",
+    "serve": "http-server ./dist -p 8888 -c1 -o",
+    "start": "npm-run-all clean -p **:watch serve",
+    "test": "npm-run-all *:validate"
+  }
+}
