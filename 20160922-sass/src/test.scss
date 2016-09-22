@@ -1,0 +1,9 @@
+$color: red;
+
+.foo {
+  color: $color;
+
+  .bar {
+    font-size: 2rem;
+  }
+}
