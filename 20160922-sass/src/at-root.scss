@@ -1,0 +1,16 @@
+$color: blue;
+
+@at-root {
+  $color: red;
+
+  .a {
+    color: $color;
+  }
+  .b {
+    color: $color;
+  }
+}
+
+.c {
+  color: $color;
+}
