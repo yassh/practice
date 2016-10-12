@@ -1,0 +1,12 @@
+{
+  "name": "20161012-yarn",
+  "version": "1.0.0",
+  "dependencies": {
+    "fixpack": "^2.3.1"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "fixpack": "fixpack"
+  }
+}
