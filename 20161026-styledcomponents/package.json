@@ -1,0 +1,32 @@
+{
+  "name": "20161026-styledcomponents",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "browser-sync": "^2.17.5",
+    "cpx": "^1.5.0",
+    "fixpack": "^2.3.1",
+    "npm-run-all": "^3.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "rimraf": "^2.5.4",
+    "styled-components": "^1.0.8",
+    "webpack": "^1.13.3"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "build+watch:js": "webpack -p --progress --watch",
+    "build:html": "cpx './src/**/*.html' './dest' --verbose",
+    "clean": "rimraf ./dest",
+    "fix": "npm-run-all fix:*",
+    "fix:pack": "fixpack",
+    "serve": "browser-sync start --server ./dest --files ./dest --no-ghost-mode",
+    "start": "npm-run-all clean build:* -p build+watch:* watch:* serve",
+    "watch:html": "cpx './src/**/*.html' './dest' --verbose --watch --no-initial"
+  }
+}
