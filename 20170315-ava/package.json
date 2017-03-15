@@ -1,0 +1,14 @@
+{
+  "name": "20170315-ava",
+  "version": "1.0.0",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "fixpack": "^2.3.1"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "fix:pack": "fixpack",
+    "test": "ava"
+  }
+}
