@@ -9,11 +9,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   computed: {
-    count() {
-      return this.$store.state.count;
-    },
+    ...mapState(['count']),
   },
   methods: {
     increment() {
