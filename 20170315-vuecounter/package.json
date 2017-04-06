@@ -1,0 +1,37 @@
+{
+  "name": "20170315-vuecounter",
+  "version": "1.0.0",
+  "dependencies": {
+    "vue": "^2.2.4",
+    "vuex": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.2.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "fixpack": "^2.3.1",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.2.6",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./docs && mkdir ./docs && webpack -p --progress",
+    "fix": "npm-run-all fix:*",
+    "fix:js": "eslint './*.js' './docs_src/**/*.js' --fix",
+    "fix:pack": "fixpack",
+    "start": "webpack-dev-server",
+    "test": "npm-run-all validate:*",
+    "validate:js": "eslint './*.js' './docs_src/**/*.js'"
+  }
+}
