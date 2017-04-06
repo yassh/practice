@@ -1,10 +1,11 @@
 import Vue from 'vue';
+import App from './App.vue';
 
 const app = new Vue({
-  data: {
-    message: 'こんにちは！',
+  components: {
+    App,
   },
-  template: '<div>{{ message }}</div>',
+  template: '<App/>',
 });
 
 app.$mount('#app');
