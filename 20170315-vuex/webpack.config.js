@@ -5,9 +5,10 @@ const SRC_DIR = path.resolve(__dirname, 'docs_src');
 const DEST_DIR = path.resolve(__dirname, 'docs');
 
 module.exports = {
+  context: SRC_DIR,
   entry: {
-    index: path.resolve(SRC_DIR, 'index.js'),
     'babel-polyfill': 'babel-polyfill',
+    index: './index.js',
   },
   output: {
     path: DEST_DIR,
@@ -19,11 +20,11 @@ module.exports = {
     },
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: 'babel-loader',
       },
     ],
   },
