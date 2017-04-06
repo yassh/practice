@@ -2,8 +2,7 @@
   "name": "20170315-vuecounter",
   "version": "1.0.0",
   "dependencies": {
-    "vue": "^2.2.4",
-    "vuex": "^2.2.1"
+    "vue": "^2.2.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
@@ -24,14 +23,15 @@
     "webpack-dev-server": "^2.4.2"
   },
   "license": "ISC",
-  "main": "index.js",
   "scripts": {
-    "build": "rimraf ./docs && mkdir ./docs && webpack -p --progress",
+    "build": "npm-run-all clean webpack",
+    "clean": "rimraf ./docs",
     "fix": "npm-run-all fix:*",
     "fix:js": "eslint './*.js' './docs_src/**/*.js' --fix",
     "fix:pack": "fixpack",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server -d",
     "test": "npm-run-all validate:*",
-    "validate:js": "eslint './*.js' './docs_src/**/*.js'"
+    "validate:js": "eslint './*.js' './docs_src/**/*.js'",
+    "webpack": "webpack -p --progress"
   }
 }
