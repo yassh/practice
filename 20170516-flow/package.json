@@ -1,0 +1,13 @@
+{
+  "name": "20170516-flow",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.46.0"
+  },
+  "scripts": {
+    "build": "babel ./src -d ./dist",
+    "flow": "flow"
+  }
+}
