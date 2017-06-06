@@ -1,13 +1,45 @@
 // @flow
 
-const strLength = (str) => str.length;
-strLength('foo');
-strLength(123);
+{
+  function f(str) { str.length }
 
-const subtract = (a, b) => a - b;
-subtract(10, 2);
-subtract('foo', 'bar');
+  // Works!
+  f('foo')
 
-const add = (a: string, b: string) => a + b;
-add(10, 2);
-add('foo', 'bar');
+  // Error!
+  f(123)
+}
+
+{
+  function f(a, b) { a - b }
+
+  // Works!
+  f(10, 2)
+
+  // Error!
+  f('foo', 'bar')
+}
+
+{
+  function f(a: string, b: string) { a + b }
+
+  // Works!
+  f('foo', 'bar')
+
+  // Error!
+  f(3, 12)
+}
+
+{
+  function f(obj: {}) {}
+
+  // Works!
+  f({})
+  f({ one: 1, two: 2, three: 3 })
+  f(() => {}) // ※関数もオブジェクトだから
+
+  // Error!
+  f(1)
+  f('hello')
+  f(null)
+}
