@@ -1,7 +1,5 @@
 {
-  function f(str) {
-    str.length;
-  }
+  const f = str => str.length;
 
   // Works!
   f('foo');
@@ -11,9 +9,7 @@
 }
 
 {
-  function f(a, b) {
-    a - b;
-  }
+  const f = (a, b) => a - b;
 
   // Works!
   f(10, 2);
@@ -23,9 +19,7 @@
 }
 
 {
-  function f(a, b) {
-    a + b;
-  }
+  const f = (a, b) => a + b;
 
   // Works!
   f('foo', 'bar');
@@ -35,15 +29,16 @@
 }
 
 {
-  function f(obj) {}
+  const f = obj => obj;
 
   // Works!
   f({});
   f({ one: 1, two: 2, three: 3 });
-  f(() => {}); // ※関数もオブジェクトだから
+  f(() => {}); // ※関数はオブジェクトだからOK？
 
   // Error!
   f(1);
   f('hello');
   f(null);
+  f([1, 2, 3]); // ※配列もオブジェクトだけど、なぜかNG
 }
