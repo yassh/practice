@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icons</title>
+  <style>
+    @font-face {
+      font-family: "yassh";
+      src: url("yassh.woff") format("woff");
+    }
+
+    .icon {
+      display: inline-block;
+      font: 100% "yassh";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    
+    .icon-ei-archive::before {
+      content: "\ea01";
+    }
+    
+    .icon-ei-arrow-down::before {
+      content: "\ea02";
+    }
+    
+    .icon-ei-arrow-left::before {
+      content: "\ea03";
+    }
+    
+    .icon-ei-arrow-right::before {
+      content: "\ea04";
+    }
+    
+    .icon-ei-arrow-up::before {
+      content: "\ea05";
+    }
+    
+    .icon-ei-bell::before {
+      content: "\ea06";
+    }
+    
+    .icon-ei-calendar::before {
+      content: "\ea07";
+    }
+    
+    .icon-ei-camera::before {
+      content: "\ea08";
+    }
+    
+    .icon-ei-cart::before {
+      content: "\ea09";
+    }
+    
+    .icon-ei-chart::before {
+      content: "\ea0a";
+    }
+    
+    .icon-ei-check::before {
+      content: "\ea0b";
+    }
+    
+    .icon-ei-chevron-down::before {
+      content: "\ea0c";
+    }
+    
+    .icon-ei-chevron-left::before {
+      content: "\ea0d";
+    }
+    
+    .icon-ei-chevron-right::before {
+      content: "\ea0e";
+    }
+    
+    .icon-ei-chevron-up::before {
+      content: "\ea0f";
+    }
+    
+    .icon-ei-clock::before {
+      content: "\ea10";
+    }
+    
+    .icon-ei-close-o::before {
+      content: "\ea11";
+    }
+    
+    .icon-ei-close::before {
+      content: "\ea12";
+    }
+    
+    .icon-ei-comment::before {
+      content: "\ea13";
+    }
+    
+    .icon-ei-credit-card::before {
+      content: "\ea14";
+    }
+    
+    .icon-ei-envelope::before {
+      content: "\ea15";
+    }
+    
+    .icon-ei-exclamation::before {
+      content: "\ea16";
+    }
+    
+    .icon-ei-external-link::before {
+      content: "\ea17";
+    }
+    
+    .icon-ei-eye::before {
+      content: "\ea18";
+    }
+    
+    .icon-ei-gear::before {
+      content: "\ea19";
+    }
+    
+    .icon-ei-heart::before {
+      content: "\ea1a";
+    }
+    
+    .icon-ei-image::before {
+      content: "\ea1b";
+    }
+    
+    .icon-ei-like::before {
+      content: "\ea1c";
+    }
+    
+    .icon-ei-link::before {
+      content: "\ea1d";
+    }
+    
+    .icon-ei-location::before {
+      content: "\ea1e";
+    }
+    
+    .icon-ei-lock::before {
+      content: "\ea1f";
+    }
+    
+    .icon-ei-minus::before {
+      content: "\ea20";
+    }
+    
+    .icon-ei-navicon::before {
+      content: "\ea21";
+    }
+    
+    .icon-ei-paperclip::before {
+      content: "\ea22";
+    }
+    
+    .icon-ei-pencil::before {
+      content: "\ea23";
+    }
+    
+    .icon-ei-play::before {
+      content: "\ea24";
+    }
+    
+    .icon-ei-plus::before {
+      content: "\ea25";
+    }
+    
+    .icon-ei-pointer::before {
+      content: "\ea26";
+    }
+    
+    .icon-ei-question::before {
+      content: "\ea27";
+    }
+    
+    .icon-ei-redo::before {
+      content: "\ea28";
+    }
+    
+    .icon-ei-refresh::before {
+      content: "\ea29";
+    }
+    
+    .icon-ei-retweet::before {
+      content: "\ea2a";
+    }
+    
+    .icon-ei-sc-facebook::before {
+      content: "\ea2b";
+    }
+    
+    .icon-ei-sc-github::before {
+      content: "\ea2c";
+    }
+    
+    .icon-ei-sc-google-plus::before {
+      content: "\ea2d";
+    }
+    
+    .icon-ei-sc-instagram::before {
+      content: "\ea2e";
+    }
+    
+    .icon-ei-sc-linkedin::before {
+      content: "\ea2f";
+    }
+    
+    .icon-ei-sc-odnoklassniki::before {
+      content: "\ea30";
+    }
+    
+    .icon-ei-sc-pinterest::before {
+      content: "\ea31";
+    }
+    
+    .icon-ei-sc-skype::before {
+      content: "\ea32";
+    }
+    
+    .icon-ei-sc-soundcloud::before {
+      content: "\ea33";
+    }
+    
+    .icon-ei-sc-telegram::before {
+      content: "\ea34";
+    }
+    
+    .icon-ei-sc-tumblr::before {
+      content: "\ea35";
+    }
+    
+    .icon-ei-sc-twitter::before {
+      content: "\ea36";
+    }
+    
+    .icon-ei-sc-vimeo::before {
+      content: "\ea37";
+    }
+    
+    .icon-ei-sc-vk::before {
+      content: "\ea38";
+    }
+    
+    .icon-ei-sc-youtube::before {
+      content: "\ea39";
+    }
+    
+    .icon-ei-search::before {
+      content: "\ea3a";
+    }
+    
+    .icon-ei-share-apple::before {
+      content: "\ea3b";
+    }
+    
+    .icon-ei-share-google::before {
+      content: "\ea3c";
+    }
+    
+    .icon-ei-spinner-2::before {
+      content: "\ea3d";
+    }
+    
+    .icon-ei-spinner-3::before {
+      content: "\ea3e";
+    }
+    
+    .icon-ei-spinner::before {
+      content: "\ea3f";
+    }
+    
+    .icon-ei-star::before {
+      content: "\ea40";
+    }
+    
+    .icon-ei-tag::before {
+      content: "\ea41";
+    }
+    
+    .icon-ei-trash::before {
+      content: "\ea42";
+    }
+    
+    .icon-ei-trophy::before {
+      content: "\ea43";
+    }
+    
+    .icon-ei-undo::before {
+      content: "\ea44";
+    }
+    
+    .icon-ei-unlock::before {
+      content: "\ea45";
+    }
+    
+    .icon-ei-user::before {
+      content: "\ea46";
+    }
+    
+
+    .sample {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  
+  <span class="sample">
+    <span class="icon icon-ei-archive"></span>
+    ei-archive
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-arrow-down"></span>
+    ei-arrow-down
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-arrow-left"></span>
+    ei-arrow-left
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-arrow-right"></span>
+    ei-arrow-right
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-arrow-up"></span>
+    ei-arrow-up
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-bell"></span>
+    ei-bell
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-calendar"></span>
+    ei-calendar
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-camera"></span>
+    ei-camera
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-cart"></span>
+    ei-cart
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-chart"></span>
+    ei-chart
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-check"></span>
+    ei-check
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-chevron-down"></span>
+    ei-chevron-down
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-chevron-left"></span>
+    ei-chevron-left
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-chevron-right"></span>
+    ei-chevron-right
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-chevron-up"></span>
+    ei-chevron-up
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-clock"></span>
+    ei-clock
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-close-o"></span>
+    ei-close-o
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-close"></span>
+    ei-close
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-comment"></span>
+    ei-comment
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-credit-card"></span>
+    ei-credit-card
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-envelope"></span>
+    ei-envelope
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-exclamation"></span>
+    ei-exclamation
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-external-link"></span>
+    ei-external-link
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-eye"></span>
+    ei-eye
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-gear"></span>
+    ei-gear
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-heart"></span>
+    ei-heart
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-image"></span>
+    ei-image
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-like"></span>
+    ei-like
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-link"></span>
+    ei-link
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-location"></span>
+    ei-location
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-lock"></span>
+    ei-lock
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-minus"></span>
+    ei-minus
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-navicon"></span>
+    ei-navicon
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-paperclip"></span>
+    ei-paperclip
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-pencil"></span>
+    ei-pencil
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-play"></span>
+    ei-play
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-plus"></span>
+    ei-plus
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-pointer"></span>
+    ei-pointer
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-question"></span>
+    ei-question
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-redo"></span>
+    ei-redo
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-refresh"></span>
+    ei-refresh
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-retweet"></span>
+    ei-retweet
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-facebook"></span>
+    ei-sc-facebook
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-github"></span>
+    ei-sc-github
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-google-plus"></span>
+    ei-sc-google-plus
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-instagram"></span>
+    ei-sc-instagram
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-linkedin"></span>
+    ei-sc-linkedin
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-odnoklassniki"></span>
+    ei-sc-odnoklassniki
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-pinterest"></span>
+    ei-sc-pinterest
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-skype"></span>
+    ei-sc-skype
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-soundcloud"></span>
+    ei-sc-soundcloud
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-telegram"></span>
+    ei-sc-telegram
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-tumblr"></span>
+    ei-sc-tumblr
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-twitter"></span>
+    ei-sc-twitter
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-vimeo"></span>
+    ei-sc-vimeo
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-vk"></span>
+    ei-sc-vk
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-sc-youtube"></span>
+    ei-sc-youtube
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-search"></span>
+    ei-search
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-share-apple"></span>
+    ei-share-apple
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-share-google"></span>
+    ei-share-google
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-spinner-2"></span>
+    ei-spinner-2
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-spinner-3"></span>
+    ei-spinner-3
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-spinner"></span>
+    ei-spinner
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-star"></span>
+    ei-star
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-tag"></span>
+    ei-tag
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-trash"></span>
+    ei-trash
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-trophy"></span>
+    ei-trophy
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-undo"></span>
+    ei-undo
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-unlock"></span>
+    ei-unlock
+  </span>
+  
+  <span class="sample">
+    <span class="icon icon-ei-user"></span>
+    ei-user
+  </span>
+  
+</body>
+</html>
+
+
+
+

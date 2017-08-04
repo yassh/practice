@@ -1,0 +1,15 @@
+{
+  "name": "20170804-webfont",
+  "version": "1.0.0",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "rimraf": "^2.6.1",
+    "webfont": "^7.1.4"
+  },
+  "scripts": {
+    "clean": "rimraf ./dest",
+    "serve": "http-server ./dest -o",
+    "start": "npm run clean && npm run webfont && npm run serve",
+    "webfont": "webfont './src/svg/*.svg' --template ./src/index.html --dest ./dest --font-name yassh --formats woff --normalize"
+  }
+}
