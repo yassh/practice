@@ -1,0 +1,10 @@
+{
+  "name": "20170905-agreed",
+  "version": "1.0.0",
+  "dependencies": {
+    "agreed": "^2.0.1"
+  },
+  "scripts": {
+    "agreed": "agreed-server --path ./agreed.js --port 3010"
+  }
+}
