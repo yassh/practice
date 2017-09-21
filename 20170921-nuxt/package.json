@@ -1,0 +1,10 @@
+{
+  "name": "20170921-nuxt",
+  "version": "1.0.0",
+  "dependencies": {
+    "nuxt": "^1.0.0-rc11"
+  },
+  "scripts": {
+    "dev": "nuxt"
+  }
+}

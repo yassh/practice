@@ -1,0 +1,14 @@
+{
+  "name": "20170921-nextjs",
+  "version": "1.0.0",
+  "dependencies": {
+    "next": "^3.2.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  }
+}
