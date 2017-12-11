@@ -1,0 +1,10 @@
+{
+  "name": "20171211-parcel",
+  "version": "1.0.0",
+  "devDependencies": {
+    "parcel-bundler": "^1.1.0"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  }
+}
