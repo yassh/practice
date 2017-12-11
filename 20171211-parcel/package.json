@@ -2,9 +2,14 @@
   "name": "20171211-parcel",
   "version": "1.0.0",
   "devDependencies": {
-    "parcel-bundler": "^1.1.0"
+    "autoprefixer": "^7.2.2",
+    "babel-preset-env": "^1.6.1",
+    "parcel-bundler": "^1.1.0",
+    "shx": "^0.2.2"
   },
   "scripts": {
-    "start": "parcel index.html"
+    "clean": "shx rm -rf ./dist",
+    "parcel": "parcel ./src/index.html",
+    "start": "npm run clean && npm run parcel"
   }
 }
