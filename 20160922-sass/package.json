@@ -2,7 +2,6 @@
   "name": "20160922-sass",
   "version": "1.0.0",
   "devDependencies": {
-    "csscomb": "^3.1.7",
     "fixpack": "^2.3.1",
     "node-sass": "^3.10.0",
     "npm-run-all": "^3.1.0",
@@ -16,7 +15,6 @@
     "fix": "npm-run-all fixpack *:fix",
     "fixpack": "fixpack",
     "scss:build": "node-sass ./src --output ./dest --output-style expanded",
-    "scss:fix": "csscomb ./src --config ../csscomb.json --verbose",
     "scss:watch": "node-sass ./src --output ./dest --output-style expanded --watch",
     "start": "npm-run-all clean *:build *:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
