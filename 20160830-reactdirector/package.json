@@ -11,7 +11,6 @@
     "http-server": "^0.9.0",
     "is": "^3.1.0",
     "jade-cli": "^0.1.1",
-    "jscs": "^3.0.7",
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
     "rimraf": "^2.5.4",
@@ -25,8 +24,6 @@
     "fixpack": "fixpack",
     "jade:build:watch": "jade ./src --out ./dist --pretty --watch",
     "jsx:build:watch": "watchify ./src/index.jsx --outfile ./dist/index.js --debug --transform [ babelify --presets [ es2015 react ] ]",
-    "jsx:fix": "jscs ./src --fix",
-    "jsx:validate": "jscs ./src",
     "serve": "http-server ./dist -p 8888 -c1 -o",
     "start": "npm-run-all clean -p **:watch serve",
     "test": "npm-run-all *:validate"

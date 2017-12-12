@@ -15,7 +15,6 @@
     "http-server": "^0.9.0",
     "jade-cli": "^0.1.1",
     "jquery": "^3.1.0",
-    "jscs": "^3.0.7",
     "jsonlint": "^1.6.2",
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
@@ -32,8 +31,6 @@
     "jade:build:watch": "jade ./src --out ./dist --pretty --watch",
     "json:fix": "jsonlint ./src/api/* --sort-keys --in-place",
     "jsx:build:watch": "simplifyify ./src/index.jsx --outfile ./dist/index.js --minify --debug --watch",
-    "jsx:fix": "jscs ./src --fix",
-    "jsx:validate": "jscs ./src",
     "serve": "http-server ./dist -p 8888 -c1 -o",
     "start": "npm-run-all -p **:watch serve",
     "test": "npm-run-all *:validate"

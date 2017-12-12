@@ -8,7 +8,6 @@
     "browser-sync": "^2.14.0",
     "fixpack": "^2.3.1",
     "jade-cli": "^0.1.1",
-    "jscs": "^3.0.7",
     "npm-run-all": "^3.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -25,8 +24,6 @@
     "fixpack": "fixpack",
     "jade:build+w": "jade ./src --out ./dist --pretty --watch",
     "js:build+w": "watchify ./src/index.jsx --outfile ./dist/index.js --transform babelify --debug",
-    "js:fix": "jscs ./src --fix",
-    "js:validate": "jscs ./src",
     "serve": "browser-sync start --server ./dist --files ./dist -port 8888 --no-ghost-mode",
     "start": "npm-run-all clean -p *:build+w serve",
     "test": "npm-run-all *:validate"
