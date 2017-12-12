@@ -1,0 +1,7 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "devDependencies": {
+    "fixpack": "^2.3.1"
+  }
+}
