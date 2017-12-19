@@ -27,7 +27,9 @@ const store = new Vuex.Store({
   },
 });
 
-setInterval(() => { store.commit('updateDate'); }, 1000);
+setInterval(() => {
+  store.commit('updateDate');
+}, 1000);
 
 const app = new Vue({
   store,
