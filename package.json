@@ -2,6 +2,10 @@
   "name": "practice",
   "version": "1.0.0",
   "devDependencies": {
-    "fixpack": "^2.3.1"
+    "fixpack": "^2.3.1",
+    "prettier": "^1.9.2"
+  },
+  "scripts": {
+    "fix": "yarn fixpack && yarn prettier './*.js' --write"
   }
 }
