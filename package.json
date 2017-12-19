@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "devDependencies": {
     "fixpack": "^2.3.1",
+    "npm-run-all": "^4.1.2",
     "prettier": "^1.9.2"
   },
   "scripts": {
