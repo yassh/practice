@@ -1,6 +1,11 @@
 {
   "name": "20171219-choo",
   "version": "1.0.0",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "dependencies": {
     "choo": "^6.6.0"
   },
@@ -8,12 +13,27 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
-    "browserify": "^14.5.0"
+    "browser-sync": "^2.19.0",
+    "chokidar-cli": "^1.2.0",
+    "cpx": "^1.5.0",
+    "fixpack": "^2.3.1",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.9.2",
+    "rimraf": "^2.6.2",
+    "simplifyify": "^3.2.4"
   },
   "scripts": {
-    "build:js": "browserify ./docs/index.js --outfile ./docs/index.bundle.js --transform [ babelify ]",
-    "fix": "npm-run-all fix:*",
-    "fix:js": "prettier ./docs/index.js --write",
-    "fix:pack": "fixpack"
+    "build": "npm-run-all clean -p build:*",
+    "build:html": "cpx './docs_src/**/*.html' ./docs --verbose",
+    "build:js": "simplifyify './docs_src/**/*.js' --outfile ./docs --minify",
+    "clean": "rimraf ./docs",
+    "fix": "npm-run-all -p fix:*",
+    "fix:js": "prettier './docs_src/**/*.js' --write",
+    "fix:pack": "fixpack",
+    "serve": "browser-sync start --server ./docs --files ./docs --open external --no-ghost-mode",
+    "start": "npm-run-all build -p watch serve",
+    "watch": "npm-run-all -p watch:*",
+    "watch:html": "chokidar './docs_src/**/*.html' --command 'npm run build:html'",
+    "watch:js": "chokidar './docs_src/**/*.js' --command 'npm run build:js'"
   }
 }
