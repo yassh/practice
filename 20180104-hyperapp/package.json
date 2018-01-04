@@ -1,0 +1,26 @@
+{
+  "name": "20180104-hyperapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "hyperapp": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "fixpack": "^2.3.1",
+    "npm-run-all": "^4.1.2",
+    "parcel-bundler": "^1.4.1",
+    "prettier": "^1.9.2",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "build": "npm-run-all clean parcel:build",
+    "clean": "rimraf ./docs",
+    "fix": "npm-run-all fix:*",
+    "fix:js": "prettier './docs_src/**/*.js' --write",
+    "fix:pack": "fixpack",
+    "parcel:build": "parcel build ./docs_src/index.html --out-dir ./docs",
+    "parcel:serve": "parcel ./docs_src/index.html --out-dir ./docs --open",
+    "start": "npm-run-all clean parcel:serve"
+  }
+}
