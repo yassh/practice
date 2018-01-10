@@ -10,6 +10,7 @@
   "scripts": {
     "fix": "npm-run-all fix:*",
     "fix:js": "prettier './src/**/*.js' --write",
-    "fix:pack": "fixpack"
+    "fix:pack": "fixpack",
+    "test": "jest"
   }
 }
