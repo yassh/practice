@@ -1,0 +1,15 @@
+{
+  "name": "20180110-jest",
+  "version": "1.0.0",
+  "devDependencies": {
+    "fixpack": "^2.3.1",
+    "jest": "^22.0.5",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.9.2"
+  },
+  "scripts": {
+    "fix": "npm-run-all fix:*",
+    "fix:js": "prettier './src/**/*.js' --write",
+    "fix:pack": "fixpack"
+  }
+}
